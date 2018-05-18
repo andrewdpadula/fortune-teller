@@ -9,8 +9,9 @@ public class FortuneTellerApp {
 		String userFirstName = input.nextLine();
 		System.out.println("Now please enter your last name.");
 		String userLastName = input.nextLine();
-		System.out.println("How old are you, " + userFirstName + " " + userLastName + "?");
+		System.out.println("How old are you?");
 		int userAge = input.nextInt();
+
 		System.out.println("In what month were you born? Enter 1 for January, 2 for February, 3 for March, etc.");
 		int birthMonth = input.nextInt();
 		System.out.println("What is your favorite ROYGBIV color? If you don't know what ROYGBIV means,"
@@ -24,74 +25,73 @@ public class FortuneTellerApp {
 		System.out.println("One more question before I predict your future. How many siblings do you have?");
 		int userSiblings = input.nextInt();
 
+		int yearsUntilRetire = 0;
 		if (userAge % 2 == 0) {
-			int yearsUntilRetire = 70;
-		} else {
-			int yearsUntilRetire = 75;
+			yearsUntilRetire = 70;
+		}
+		if (userAge % 2 == 1) {
+			yearsUntilRetire = 75;
 		}
 
+		String vacationHome = null;
 		if (userSiblings == 0) {
-			String vacationHome = "Reykjavik, Iceland";
+			vacationHome = "Reykjavik, Iceland";
 		}
 		if (userSiblings == 1) {
-			String vacationHome = "Auckland, New Zealand";
+			vacationHome = "Auckland, New Zealand";
 		}
 		if (userSiblings == 2) {
-			String vacationHome = "Nashville, Tennessee";
+			vacationHome = "Nashville, Tennessee";
 		}
 		if (userSiblings == 3) {
-			String vacationHome = "Toronto, Canada";
+			vacationHome = "Toronto, Canada";
 		}
 		if (userSiblings > 3) {
-			String vacationHome = "Florence, Italy";
+			vacationHome = "Florence, Italy";
 		}
 		if (userSiblings < 0) {
-			String vacationHome = "the friendly town of Hell, Michigan";
+			vacationHome = "the friendly town of Hell, Michigan";
 		}
 
+		String meansOfTransit = null;
 		if (favoriteColor.toLowerCase().equals("red")) {
-			String meansOfTransit = "Ford pickup truck";
+			meansOfTransit = "Ford pickup truck";
 		}
 		if (favoriteColor.toLowerCase().equals("orange")) {
-			String meansOfTransit = "PT Cruiser";
+			meansOfTransit = "PT Cruiser";
 		}
 		if (favoriteColor.toLowerCase().equals("yellow")) {
-			String meansOfTransit = "school bus";
+			meansOfTransit = "school bus";
 		}
 		if (favoriteColor.toLowerCase().equals("green")) {
-			String meansOfTransit = "John Deere tractor";
+			meansOfTransit = "John Deere tractor";
 		}
 		if (favoriteColor.toLowerCase().equals("blue")) {
-			String meansOfTransit = "unicycle";
+			meansOfTransit = "unicycle";
 		}
 		if (favoriteColor.toLowerCase().equals("indigo")) {
-			String meansOfTransit = "Vespa scooter";
+			meansOfTransit = "Vespa scooter";
 		}
 		if (favoriteColor.toLowerCase().equals("violet")) {
-			String meansOfTransit = "skateboard";
+			meansOfTransit = "skateboard";
 		}
-
+		String bankBalance = null;
 		if (birthMonth >= 1 && birthMonth <= 4) {
-			String bankBalance = "$450,725.89";
+			bankBalance = "$450,725.89";
 		}
 		if (birthMonth >= 5 && birthMonth <= 8) {
-			String bankBalance = "$20,114.37";
+			bankBalance = "$20,114.37";
 		}
 		if (birthMonth >= 9 && birthMonth <= 12) {
-			String bankBalance = "$15.66";
+			bankBalance = "$15.66";
 		}
 		if (birthMonth < 1 || birthMonth > 12) {
-			String bankBalance = "$0.00";
+			bankBalance = "$0.00";
 		}
-		
-		System.out.println(userFirstName + userLastName + "will retire in " + yearsUntilRetire + " years with " + bankBalance + " in the bank, a vacation home in " + vacationHome + ", and travel by" + meansOfTransit + ".");
-		
-	
-/*		System.out.println(userFirstName + userLastName + " will retire in "
-				+ yearsUntilRetire + " years with " +bankBalance
-				+ " in the bank, a vacation home in " + vacationHome
-				+ ", and travel by " + meansOfTransit + ".");
-	*/
-		
+
+		System.out.println(userFirstName + " " + userLastName + " will retire in " + yearsUntilRetire + " years with "
+				+ bankBalance + " in the bank, a vacation home in " + vacationHome + ", and travel by " + meansOfTransit
+				+ ".");
+
 	}
 }
