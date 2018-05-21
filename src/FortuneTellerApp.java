@@ -7,13 +7,28 @@ public class FortuneTellerApp {
 
 		System.out.println("Please enter your first name.");
 		String userFirstName = input.nextLine();
+		if (userFirstName.toLowerCase().equals("quit")) {
+			System.out.println("Nobody likes a quitter...");
+			System.exit(0);
+		}
 		System.out.println("Now please enter your last name.");
 		String userLastName = input.nextLine();
+		if (userLastName.toLowerCase().equals("quit")) {
+			System.out.println("Nobody likes a quitter...");
+			System.exit(0);
+		}
 		System.out.println("How old are you?");
 		int userAge = input.nextInt();
-
+		/*
+		 * if (birthMonth == Integer.parseInt("quit")) {
+		 * System.out.println("Nobody likes a quitter..."); System.exit(0); }
+		 */
 		System.out.println("In what month were you born? Enter 1 for January, 2 for February, 3 for March, etc.");
 		int birthMonth = input.nextInt();
+		/*
+		 * if (birthMonth == Integer.parseInt("quit")) {
+		 * System.out.println("Nobody likes a quitter..."); System.exit(0); }
+		 */
 		System.out.println("What is your favorite ROYGBIV color? If you don't know what ROYGBIV means,"
 				+ " type Help for assistance.");
 		String favoriteColor = input.next();
@@ -22,8 +37,17 @@ public class FortuneTellerApp {
 					+ " Red, orange, yellow, green, blue, indigo, or violet.");
 			favoriteColor = input.next();
 		}
+		if (favoriteColor.toLowerCase().equals("quit")) {
+			System.out.println("Nobody likes a quitter...");
+			System.exit(0);
+		}
 		System.out.println("One more question before I predict your future. How many siblings do you have?");
 		int userSiblings = input.nextInt();
+
+		/*
+		 * if (userSiblings == Integer.parseInt("quit")) {
+		 * System.out.println("Nobody likes a quitter..."); System.exit(0); }
+		 */
 
 		int yearsUntilRetire = 0;
 		if (userAge % 2 == 0) {
